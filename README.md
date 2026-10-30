@@ -20,7 +20,3 @@ Compared unpadded, padded, and privatized shared counters. The measurements show
 **Milestone 3 – Scaling**
 
 Compared strong and weak scaling using a 2D five-point stencil. The results showed [describe your actual speedup, efficiency, and weak scaling findings].
-
-## Conclusion
-
-The experiments demonstrated how memory locality, cache-line contention, and process overhead affect parallel performance. The best-performing approach in each experiment was [use your actual measurements].
