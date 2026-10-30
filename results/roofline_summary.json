@@ -1,0 +1,100 @@
+{
+    "kernel": "2D five-point stencil",
+    "iterations": 5,
+    "floating_point_operations_per_cell": 5,
+    "bytes_per_cell_without_cache_reuse": 40,
+    "arithmetic_intensity_flops_per_byte": 0.125,
+    "assumption": "Four float64 neighbor loads and one float64 output store per updated cell; cache reuse is not included.",
+    "cache_sizes_from_host_profile": {
+        "cpu": {
+            "model": "13th Gen Intel(R) Core(TM) i7-13700HX",
+            "architecture": "X86_64",
+            "family": 6,
+            "model_number": 191,
+            "physical_cores": 16,
+            "logical_processors": 24,
+            "smt_enabled": true,
+            "reported_max_clock_mhz": 2100,
+            "current_frequency_mhz": 1453.0,
+            "l1_data_cache_reported": null,
+            "l2_cache_reported": 65536,
+            "l3_cache_reported": null,
+            "cache_line_bytes_reported": null,
+            "cache_records_from_windows": [
+                {
+                    "DeviceID": "Cache Memory 0",
+                    "Purpose": "L1 Cache",
+                    "Level": 3,
+                    "InstalledSize": 384,
+                    "BlockSize": 1024
+                },
+                {
+                    "DeviceID": "Cache Memory 1",
+                    "Purpose": "L1 Cache",
+                    "Level": 3,
+                    "InstalledSize": 256,
+                    "BlockSize": 1024
+                },
+                {
+                    "DeviceID": "Cache Memory 2",
+                    "Purpose": "L2 Cache",
+                    "Level": 4,
+                    "InstalledSize": 10240,
+                    "BlockSize": 1024
+                },
+                {
+                    "DeviceID": "Cache Memory 3",
+                    "Purpose": "L3 Cache",
+                    "Level": 5,
+                    "InstalledSize": 30720,
+                    "BlockSize": 1024
+                },
+                {
+                    "DeviceID": "Cache Memory 4",
+                    "Purpose": "L1 Cache",
+                    "Level": 3,
+                    "InstalledSize": 256,
+                    "BlockSize": 1024
+                },
+                {
+                    "DeviceID": "Cache Memory 5",
+                    "Purpose": "L1 Cache",
+                    "Level": 3,
+                    "InstalledSize": 512,
+                    "BlockSize": 1024
+                },
+                {
+                    "DeviceID": "Cache Memory 6",
+                    "Purpose": "L2 Cache",
+                    "Level": 4,
+                    "InstalledSize": 4096,
+                    "BlockSize": 1024
+                },
+                {
+                    "DeviceID": "Cache Memory 7",
+                    "Purpose": "L3 Cache",
+                    "Level": 5,
+                    "InstalledSize": 30720,
+                    "BlockSize": 1024
+                }
+            ],
+            "windows_l2_cache_kb": 14336,
+            "windows_l3_cache_kb": 30720
+        },
+        "operating_system": {
+            "system": "Windows",
+            "release": "11",
+            "version": "10.0.26200",
+            "machine": "AMD64",
+            "processor": "Intel64 Family 6 Model 191 Stepping 2, GenuineIntel"
+        },
+        "python": {
+            "version": "3.13.0 (tags/v3.13.0:60403a5, Oct  7 2024, 09:38:07) [MSC v.1941 64 bit (AMD64)]",
+            "implementation": "cpython"
+        },
+        "numpy": "2.5.4"
+    },
+    "memory_bandwidth_assessment": "Likely memory-bandwidth sensitive because arithmetic intensity is low. A definitive Roofline classification requires verified peak memory bandwidth and peak FLOP rate.",
+    "amdahl_average_serial_fraction": 0.5199498427889258,
+    "amdahl_maximum_speedup": 1.9232624336150654
+}
